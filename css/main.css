@@ -1,0 +1,628 @@
+html {
+    height: 100%
+}
+
+body {
+    background-color:darkgray;
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: microsoft yahei light, microsoft yahei, PingFangSC-Regular, Helvetica, sans-serif, 等线;
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none
+}
+
+a {
+    outline: none
+}
+
+::selection {
+    background: #70c000;
+    color: #fff
+}
+
+::-moz-selection {
+    background: #70c000;
+    color: #fff
+}
+
+::-webkit-selection {
+    background: #70c000;
+    color: #fff
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+#topBg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../image/CIET.png);
+}
+
+.navBar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    transition: .25s
+}
+
+.topLogo {
+    position: absolute;
+    left: 0;
+    margin-left: 200px;
+    top: 10px;
+    width: 250px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/Logo_Main_1808.png);
+    transition: .25s
+}
+
+.navBox {
+    position: absolute;
+    left: 100%;
+    margin-left: -575px;
+    top: 30px;
+    width: 400px;
+    text-align: center
+}
+
+.navLink {
+    position: relative;
+    text-decoration: none;
+    transition: .25s
+}
+
+.navBar .navLink {
+    color: #fff;
+    font-size: 15px;
+    margin: 30px
+}
+
+.navBar .navLink:before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #70c000;
+    transition: .25s;
+    transform: scale(0)
+}
+
+.navBar .navLink:hover:before {
+    transform: scale(1)
+}
+
+.navBar .navLink:active:before {
+    background: rgba(112, 192, 0, .6)
+}
+
+.navBar .navLink:active {
+    color: rgba(255, 255, 255, .6)
+}
+
+.menuIcon {
+    position: absolute;
+    top: 31.5px;
+    left: 100%;
+    margin-left: -50px;
+    width: 25px;
+    height: 2px;
+    padding: 6px 0;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    background-clip: content-box;
+    transition: .25s;
+    cursor: pointer;
+    display: none
+}
+
+.navBar .menuIcon {
+    border-color: #fff;
+    background-color: #fff
+}
+
+#navMenu .menuIcon {
+    border-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.navBar .menuIcon:hover {
+    border-color: rgba(255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, .6)
+}
+
+#navMenu .menuIcon:hover {
+    border-color: #70c000;
+    background-color: #70c000
+}
+
+#mask {
+    position: fixed;
+    z-index: -99;
+    width: 100%;
+    height: 100%;
+    background: 0 0;
+    transition: .25s
+}
+
+#navMenu {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 100%;
+    margin-left: 30px;
+    width: 260px;
+    height: 100%;
+    padding-top: 80px;
+    background: #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, .1) 0 0 30px;
+    -moz-box-shadow: rgba(0, 0, 0, .1) 0 0 30px;
+    box-shadow: rgba(0, 0, 0, .1) 0 0 30px;
+    transition: .25s
+}
+
+#navMenu .navLink {
+    color: rgba(0, 0, 0, .6);
+    font-size: small;
+    display: block;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+#navMenu .navLink:hover {
+    background: rgba(0, 0, 0, .1);
+    color: #000
+}
+
+#topTitle {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center
+}
+
+.underline {
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    margin-top: -30px;
+    width: 70px;
+    border-bottom: 4px solid #70c000
+}
+
+.underline1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -10px;
+    width: 50px;
+    border-bottom: 3px solid #70c000
+}
+
+h1 {
+    font-family: microsoft yahei, PingFangSC-Regular;
+    font-weight: 400;
+    font-size: 75px;
+    color: #fff
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 30px;
+    color: #3c3c3c
+}
+
+#scrollDown {
+    position: absolute;
+    top: 100%;
+    margin-top: -100px;
+    width: 100%
+}
+
+#scrollDownIcon {
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: 50px;
+    border-right: 3px solid rgba(255, 255, 255, .5);
+    border-top: 3px solid rgba(255, 255, 255, .5);
+    height: 20px;
+    width: 20px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    cursor: pointer;
+    transition: .25s
+}
+
+#scrollDownIcon:hover {
+    border-right: 3px solid #fff;
+    border-top: 3px solid #fff
+}
+
+#scrollDownIcon:active {
+    border-right: 3px solid rgba(255, 255, 255, .35);
+    border-top: 3px solid rgba(255, 255, 255, .35)
+}
+
+#top {
+    position: relative;
+    top: 0
+}
+
+#about,
+#work,
+#log,
+footer {
+    position: relative;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 100px
+}
+
+#about,
+#log {
+    background: #fff
+}
+
+.tagBox {
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
+    font-size: small
+}
+
+.tag {
+    background: rgba(0, 0, 0, .06);
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #646464;
+    transition: .25s
+}
+
+.tag:hover {
+    background: rgba(0, 0, 0, .1);
+    color: #0a0a0a;
+    -webkit-box-shadow: rgba(0, 0, 0, .1) 0 5px 10px;
+    -moz-box-shadow: rgba(0, 0, 0, .1) 0 5px 10px;
+    box-shadow: rgba(0, 0, 0, .1) 0 5px 10px
+}
+
+.aboutContent {
+    position: relative;
+    margin-top: 35px;
+    width: 100%;
+    font-size: 14px;
+    background: #fff;
+    color: #5a5a5a
+}
+
+#work {
+    background: #f5f5f5
+}
+
+.workList {
+    position: relative;
+    margin-top: 50px;
+    left: 10%;
+    width: 80%
+}
+
+.workLink {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    background: #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, .03) 0 5px 10px;
+    -moz-box-shadow: rgba(0, 0, 0, .03) 0 5px 10px;
+    box-shadow: rgba(0, 0, 0, .03) 0 5px 10px;
+    text-align: left;
+    transition: .25s;
+    cursor: pointer
+}
+
+.workLink:hover {
+    -webkit-box-shadow: rgba(0, 0, 0, .2) 0 10px 30px;
+    -moz-box-shadow: rgba(0, 0, 0, .2) 0 10px 30px;
+    box-shadow: rgba(0, 0, 0, .2) 0 10px 30px
+}
+
+.workLinkPic {
+    position: absolute;
+    width: 100%;
+    height: 155px;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#workLinkPic_A {
+    background-image: url(../images/workLinkPic_A.jpg)
+}
+
+#workLinkPic_XMFLS {
+    background-image: url(../images/workLinkPic_XMFLS.jpg)
+}
+
+#workLinkPic_Portal {
+    background-image: url(../images/workLinkPic_Portal.jpg)
+}
+
+#workLinkPic_Pixel {
+    background-image: url(../images/workLinkPic_Pixel.jpg)
+}
+
+#workLinkPic_YXH {
+    background-image: url(../images/workLinkPic_YXH.jpg)
+}
+
+#workLinkPic_SSS {
+    background-image: url(../images/workLinkPic_SSS.jpg)
+}
+
+#workLinkPic_cmd {
+    background-image: url(../images/workLinkPic_cmd.jpg)
+}
+
+.workLinkTextBox {
+    padding-left: 20px;
+    padding-top: 165px
+}
+
+.workLinkText1 {
+    font-size: 15px;
+    line-height: 0;
+    font-family: microsoft yahei, PingFangSC-Regular;
+    font-weight: 700
+}
+
+.workLinkText2 {
+    font-size: small;
+    line-height: 10px;
+    white-space: nowrap
+}
+
+.workLinkText3 {
+    font-size: 11px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, .5)
+}
+
+.logBoxOuter {
+    position: relative;
+    margin-top: 30px;
+    width: 70%;
+    left: 15%;
+    overflow: hidden
+}
+
+#logBox {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    overflow: -moz-scrollbars-none;
+    -webkit-overflow-scrolling: touch
+}
+
+#logBox::-webkit-scrollbar {
+    display: none
+}
+
+.tip {
+    padding-top: 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .6)
+}
+
+.logContent {
+    display: inline-block;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: left;
+    vertical-align: top
+}
+
+.logText1,
+.logText3 {
+    font-size: 18px;
+    line-height: 3px;
+    font-family: microsoft yahei, PingFangSC-Regular;
+    font-weight: 700
+}
+
+.logText2 {
+    font-size: small;
+    line-height: 5px
+}
+
+.logText3 {
+    color: rgba(0, 0, 0, .2)
+}
+
+.logMaskL,
+.logMaskR {
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%
+}
+
+.logMaskL {
+    left: 0;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), white)
+}
+
+.logMaskR {
+    left: 90%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white)
+}
+
+.footerCol {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    padding-left: 50px;
+    padding-right: 50px
+}
+
+.footerTitle {
+    font-family: microsoft yahei, PingFangSC-Regular;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 10px;
+    color: #fff
+}
+
+.footerLink {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    transition: .25s
+}
+
+a.footerLink:hover {
+    color: #70c000
+}
+
+a.footerLink:active {
+    color: rgba(112, 192, 0, .6)
+}
+
+.footerText1 {
+    color: #fff;
+    font-size: 12px;
+    line-height: 10px
+}
+
+.beianText {
+    position: relative;
+    top: -6px
+}
+
+.footerText2 {
+    color: rgba(255, 255, 255, .5);
+    font-size: 12px;
+    text-decoration: none
+}
+
+@media screen and (max-width:1200px) {
+    .topLogo {
+        margin-left: 100px
+    }
+
+    .navBox {
+        margin-left: -525px;
+        width: 500px
+    }
+
+    .workList {
+        left: 5%;
+        width: 90%
+    }
+}
+
+@media screen and (max-width:900px) {
+    .topLogo {
+        margin-left: 25px
+    }
+
+    .navBox {
+        display: none
+    }
+
+    .menuIcon {
+        display: block
+    }
+
+    .workList {
+        left: 0;
+        width: 100%
+    }
+}
+
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 65px
+    }
+
+    h2 {
+        font-size: small;
+        line-height: 12px
+    }
+
+    .tagBox {
+        font-size: 12px
+    }
+
+    .aboutContent {
+        font-size: small;
+        left: 5%;
+        width: 90%
+    }
+
+    .logContent {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+
+    .footerCol {
+        padding-bottom: 30px
+    }
+
+    footer {
+        padding-bottom: 60px
+    }
+
+    #copyright {
+        text-align: center
+    }
+}
+
+@media screen and (max-width:400px) {
+    .footerCol {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+}
